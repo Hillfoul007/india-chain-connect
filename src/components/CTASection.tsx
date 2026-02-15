@@ -1,8 +1,10 @@
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useNavigate } from "react-router-dom";
 
 const CTASection = () => {
+  const navigate = useNavigate();
   return (
     <section className="py-32 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-t from-primary/5 via-transparent to-transparent" />
@@ -21,7 +23,7 @@ const CTASection = () => {
             Explore our MVP—DID wallet, logistics dashboard, credit scoring, and
             decentralized storage—all running on high-throughput L2 infrastructure.
           </p>
-          <Button size="lg" className="text-lg px-10 py-6 font-display font-semibold gap-2 group">
+          <Button size="lg" className="text-lg px-10 py-6 font-display font-semibold gap-2 group" onClick={() => navigate("/auth")}>
             Launch MVP Demo
             <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
           </Button>

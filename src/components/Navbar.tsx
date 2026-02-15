@@ -1,7 +1,10 @@
 import { motion } from "framer-motion";
 import { Link } from "lucide-react";
+import { useNavigate } from "react-router-dom";
+import { Button } from "@/components/ui/button";
 
 const Navbar = () => {
+  const navigate = useNavigate();
   return (
     <motion.nav
       initial={{ opacity: 0, y: -20 }}
@@ -23,6 +26,7 @@ const Navbar = () => {
           <a href="#impact" className="hover:text-foreground transition-colors">Impact</a>
           <a href="#why" className="hover:text-foreground transition-colors">Why Us</a>
           <a href="#mvp" className="hover:text-foreground transition-colors">MVP</a>
+          <Button size="sm" onClick={() => navigate("/auth")}>Dashboard</Button>
         </div>
       </div>
     </motion.nav>

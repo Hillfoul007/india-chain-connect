@@ -1,9 +1,11 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Shield, Zap } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import heroBg from "@/assets/hero-bg.jpg";
 
 const HeroSection = () => {
+  const navigate = useNavigate();
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background image */}
@@ -49,8 +51,8 @@ const HeroSection = () => {
 
           {/* CTA */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="text-lg px-8 py-6 font-display font-semibold gap-2 group">
-              Explore Platform
+            <Button size="lg" className="text-lg px-8 py-6 font-display font-semibold gap-2 group" onClick={() => navigate("/auth")}>
+              Get Started
               <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
             </Button>
             <Button

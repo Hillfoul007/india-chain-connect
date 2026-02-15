@@ -1,1 +1,7 @@
 project_id = "mpjvsktryjefdvlqjvdi"
+
+[functions.ai-chat]
+verify_jwt = false
+
+[functions.ai-credit-score]
+verify_jwt = false
